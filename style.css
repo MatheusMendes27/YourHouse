@@ -1,0 +1,622 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: space-around;
+    height: 6rem;
+    background-color: #9834eb;
+    font-family: 'Fredoka One', cursive;
+    width: 100vw;
+
+}
+
+.logo a {
+    color: white;
+    text-decoration: none;
+}
+
+.logo {
+    margin-top: 1.2rem;
+    font-size: 3rem;
+}
+
+.main-ul ul {
+    display: flex;
+    margin-top: 2.5rem;
+
+}
+
+.main-ul ul li ul {
+    display: block;
+    background-color: #a130ff;
+    border-radius: 10px;
+}
+
+.main-ul ul li #hidden-ul li a {
+    color: white;
+}
+
+.main-ul ul li {
+    justify-items: center;
+    position: relative;
+    list-style-type: none;
+    font-family: 'Rubik', sans-serif;
+    transition: .5s;
+}
+
+.main-ul ul li:hover {
+    text-decoration: underline;
+}
+
+
+.main-ul ul li a {
+    text-decoration: none;
+    color: black;
+    padding: 3rem;
+}
+
+.litop {
+    transform: translate3d(0, -10px, 0);
+    transition: .5s;
+}
+
+/*.main-ul ul li:hover ul{
+    display: block; 
+    position: absolute;
+    margin-left: 2.2rem;    
+}*/
+
+.main-ul ul li ul li {
+    padding: 1rem;
+}
+
+.show {
+    transition: 1s;
+    height: 10rem;
+}
+
+.hide {
+    height: 0;
+    transition: 1s;
+}
+
+.hide-li {
+    opacity: 0;
+
+}
+
+.show-li {
+    opacity: 1;
+}
+
+.hamburguer {
+    display: none;
+    cursor: pointer;
+    margin-top: 2.2rem;
+}
+
+.hamburguer .bar {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: white;
+    color: white;
+    margin-top: 6px;
+    border-radius: 2px;
+    transition: .3s
+}
+
+
+
+
+
+
+/*Main*/
+
+main {
+    font-family: 'Rubik', sans-serif;
+}
+
+.text {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.first-img {
+    height: 30vh;
+    width: 25vw;
+    transition: 1s;
+}
+
+.second-img {
+    height: 30vh;
+    width: 25vw;
+    transition: 1s;
+}
+
+.pane1 {
+    display: flex;
+    justify-content: space-around;
+    justify-items: center;
+    font-size: 2rem;
+    margin-top: 3rem;
+}
+
+.container-img {
+    background-color: #f7650a;
+    height: 40rem;
+    width: 50rem;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+
+}
+
+.container-img:hover {
+    width: 60rem;
+    transition: 1s;
+}
+
+.container-img:hover img {
+    height: 35vh;
+    width: 28vw;
+    transition: 1s;
+}
+
+.block {
+    display: block;
+    background-color: #f7650a;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 10px 5px 1px #8c00ff71;
+}
+
+.up {
+    margin-bottom: 2.5rem;
+    color: white;
+}
+
+.up.clicked {
+    text-decoration: none;
+    color: white;
+
+}
+
+/*Configurações p mobile*/
+@media(max-width: 800px) {
+    .hamburguer {
+        display: block;
+    }
+
+    .hamburguer.active .bar:nth-child(1) {
+        transform: translateY(4.5px) rotate(45deg);
+        transition: .3s
+    }
+
+    .hamburguer.active .bar:nth-child(3) {
+        opacity: 0;
+    }
+
+    .hamburguer.active .bar:nth-child(2) {
+        transform: translateY(-4.5px) rotate(-45deg);
+        transition: .2s;
+    }
+
+
+    .main-ul ul {
+        position: fixed;
+        right: 100%;
+        top: 55px;
+        transition: .3s;
+        background-color: #8b4cbe;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .main-ul ul li ul.active {
+        display: block;
+    }
+
+    .main-ul ul li {
+        padding: 20px;
+        font-size: 1.3rem;
+        background-color: #965dc5;
+        border-bottom: 1px solid black;
+        border-radius: 30px;
+
+    }
+
+    .main-ul ul.active {
+        right: 0;
+        transition: .3s;
+    }
+
+    .main-ul ul li ul {
+        position: absolute;
+        left: 0;
+        top: 0;
+        margin-top: 5rem;
+
+        margin-left: 4rem;
+        width: 50vw;
+        height: 10rem;
+        background-color: #8b4cbe;
+
+
+    }
+
+    .main-ul ul li ul li {
+        padding: 0;
+        margin: 0;
+        font-size: 1rem;
+        background-color: #a130ff;
+
+        margin-top: 1.5rem;
+    }
+
+    .container-img:hover {
+        width: 16rem;
+    }
+
+    .container-img:hover img {
+        height: 10rem;
+        width: 10rem;
+    }
+
+    .main-ul ul li #hidden-ul li {
+        opacity: 1;
+        display: block;
+    }
+
+    .logo {
+        font-size: 2em;
+        margin-left: 3.8rem;
+        margin-top: 2rem;
+    }
+
+    .nav-bar {
+        display: flex;
+        justify-content: space-around;
+        height: 6rem;
+        width: 100%;
+        background-color: #9834eb;
+        font-family: 'Fredoka One', cursive;
+    }
+
+    .main-ul ul {
+        display: block;
+    }
+
+    .text {
+        font-size: 2rem;
+        margin-left: 1rem;
+    }
+
+    .first-img {
+        height: 10rem;
+        width: 10rem;
+    }
+
+    .second-img {
+        height: 10rem;
+        width: 10rem;
+    }
+
+    .up {
+        font-size: 1rem;
+        padding-bottom: .9rem;
+    }
+
+    .alinha-mobile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .pane1 {
+        display: block;
+    }
+
+    .container-img {
+        width: 16rem;
+        height: 12rem;
+    }
+
+    .block {
+        width: 16rem;
+    }
+
+    .alinha-mobile-sobre .text-sobre {
+        width: 90vw;
+        font-size: 1.3rem;
+        padding: 5rem;
+    }
+
+    .alinha-mobile-sobre {
+        display: flex;
+        justify-content: center;
+    }
+
+    .eletro .menu-lat {
+        width: 100vw;
+        display: none;
+    }
+
+    .eletro .menu-lat li {
+        font-size: 1rem;
+    }
+
+    .eletro .alinha-product .product {
+        height: 20rem;
+        width: 23rem;
+        margin-right: 30px;
+    }
+
+    .eletro .alinha-product .product img {
+        height: 10rem;
+        width: 15rem;
+    }
+
+    .alinha-name .btn-comprar {
+        width: 7rem;
+        height: 4rem;
+        font-size: 1rem;
+        margin-top: 30px;
+        margin-right: 10px;
+
+    }
+
+    .btn-comprar .comprar {
+        font-size: .8rem;
+    }
+
+    .btn-comprar .price {
+        font-size: .8rem;
+
+    }
+
+    .comprar {
+        margin-top: 0px;
+        margin-left: 0PX;
+    }
+
+    .alinha-name .name-product {
+        font-size: 1.1rem;
+        margin-left: 0px;
+        margin-right: 0px;
+
+    }
+
+    .product .alinha-name {
+        margin-left: 4rem;
+    }
+
+    .hamburguer1 .bar1 {
+        display: block;
+        width: 28px;
+        height: 3px;
+        background-color: black;
+        color: black;
+        margin-top: 6px;
+        border-radius: 1 2px;
+        transition: .3s
+    }
+
+
+    .hamburguer2 .bar2 {
+        display: block;
+        width: 28px;
+        height: 3px;
+        background-color: black;
+        color: black;
+        border-radius: 2px;
+        transition: .3s;
+
+    }
+
+    .hamburguer2 .bar2:nth-child(1) {
+        transform: translateY(3.5px) rotate(45deg);
+        transition: .3s
+    }
+
+    .hamburguer2 .bar2:nth-child(3) {
+        opacity: 0;
+    }
+
+    .hamburguer2 .bar2:nth-child(2) {
+        transform: translateY(-.1px) rotate(-45deg);
+        transition: .2s;
+    }
+
+
+
+    .hamburguer2.active .bar2:nth-child(1) {
+        transform: translateY(0px) rotate(0deg);
+        transition: .3s
+    }
+
+    .hamburguer2.active .bar2:nth-child(3) {
+        opacity: 1;
+    }
+
+    .hamburguer2.active .bar2:nth-child(2) {
+        transform: translateY(0px) rotate(0deg);
+        transition: .2s;
+    }
+
+    .eletro .menu-lat.active {
+        display: block;
+    }
+
+    .alinha-product {
+        display: flex;
+        justify-content: center;
+        width: 90vw;
+    }
+
+
+}
+
+/*eletro*/
+.eletro {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.product img {
+    width: 30rem;
+    height: 20rem;
+    margin-left: 4rem;
+    margin-top: 2rem;
+
+}
+
+.selected {
+    background-color: #ff8e48e0;
+}
+
+.product {
+    border: 1px solid #8b4cbe;
+    border-radius: 10px;
+    margin-top: 4rem;
+    width: 40rem;
+    height: 30rem;
+    margin-right: 40rem;
+    display: block;
+    background-color: rgb(236, 236, 236);
+    box-shadow: 2px 3px 1px #8b4cbe;
+    transition: .3s;
+}
+
+.product .geladeira-img {
+    width: 25rem;
+    height: 20rem;
+}
+
+.product .microondas-img {
+    width: 25rem;
+    height: 20rem;
+}
+
+
+.name-product {
+    margin-top: 2.8rem;
+    font-size: 1.6rem;
+    margin-left: 4rem;
+}
+
+.alinha-name {
+    display: flex;
+}
+
+.comprar {
+    margin-top: 5px;
+    margin-left: 10PX;
+}
+
+
+.price {
+    margin-bottom: 5px;
+}
+
+.btn-comprar {
+    margin-top: 1.3rem;
+    font-size: 1rem;
+    margin-left: 7rem;
+    display: block;
+    background-color: rgb(6, 161, 6);
+    padding: 1rem;
+    border-radius: 10px;
+    transition: .3s;
+}
+
+.btn-comprar:hover {
+    background-color: rgb(17, 197, 17);
+    transition: .3s;
+}
+
+
+.product:hover {
+    box-shadow: 6px 6px 1px #8b4cbe;
+    transition: .3s;
+
+}
+
+.menu-lat {
+    padding: 5rem 3rem;
+    background-color: lightgray;
+    height: 100vh;
+    width: 15vw;
+    border-radius: 10px;
+    position: fixed;
+
+}
+
+.menu-lat ul {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.menu-lat li {
+    color: black;
+    list-style: none;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+    font-size: 1.3rem;
+    text-align: center;
+    width: 100%;
+    border-radius: 10px;
+    transition: .5s;
+}
+
+.menu-lat li a {
+    color: black;
+    text-decoration: none;
+}
+
+.menu-lat li:hover {
+    background-color: #eca980a9;
+    transition: .5s;
+}
+
+.menu-lat div {
+    padding-bottom: 4rem;
+}
+
+
+
+
+
+/*Sobre*/
+
+.title-sobre {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5rem;
+    font-size: 3rem;
+}
+
+.text-sobre {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem 20rem;
+    font-size: 1.3rem;
+    background-color: #f7650aa4;
+    padding: 8rem;
+    border-radius: 10px;
+    box-shadow: 10px 5px 1px #9934eb;
+
+}
